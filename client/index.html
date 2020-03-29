@@ -81,7 +81,6 @@
                     <div class="main-banner">
                         <img src="./images/odisi/odisi-healthcare.png" height="180px">
                         <br>
-                        <br>
                         <hr>
                         <!-- Heading -->
                         <h1 class="display-4 mb-4 font-weight-normal">
@@ -358,7 +357,7 @@
                             <li>Videollamada</li>
                         </ul>
 
-                        <a href="#" class="btn btn-outline-dark btn-circled" data-toggle="modal" data-target="#exampleModalCenter">Consultar</a>
+                        <button href="#" class="btn btn-outline-dark btn-circled" data-toggle="modal" data-target="#exampleModalCenter" id="plan_remoto_btn">Consultar</button>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 col-md-6">
@@ -376,7 +375,7 @@
      
                         </ul>
 
-                        <a href="#" class="btn btn-primary btn-circled" data-toggle="modal" data-target="#exampleModalCenter">Consultar</a>
+                        <button class="btn btn-primary btn-circled" data-toggle="modal" data-target="#exampleModalCenter" id="plan_gold_btn">Consultar</button>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-8 col-md-6">
@@ -393,7 +392,7 @@
                             <li>IA + Data analysis</li>
                         </ul>
 
-                        <a href="#" class="btn btn-outline-dark btn-circled" data-toggle="modal" data-target="#exampleModalCenter">Consultar</a>
+                        <a href="#" class="btn btn-outline-dark btn-circled" data-toggle="modal" data-target="#exampleModalCenter" id="plan_premium_btn">Consultar</a>
                     </div>
                 </div>
             </div>
@@ -418,7 +417,8 @@
           </button>
         </div>
         <div class="modal-body">
-            <form class="contact_form" action="mail.php">
+
+            <div class="contact_form" action="mail.php">
                 <div class="row">
                     <!-- Input -->
                     <div class="col-sm-6 mb-6">
@@ -429,7 +429,7 @@
                             </label>
 
                             <div class="input-group">
-                                <input class="form-control" name="name" id="name" required="" placeholder="Nombre y Apellido" type="text">
+                                <input class="form-control" id="nombre" placeholder="Nombre y Apellido" type="text">
                             </div>
                         </div>
                     </div>
@@ -444,7 +444,7 @@
                             </label>
 
                             <div class="input-group ">
-                                <input class="form-control" name="email" id="email" required="" placeholder="email@email.com" type="email">
+                                <input class="form-control"id="email"placeholder="email@email.com" type="email">
                             </div>
                         </div>
                     </div>
@@ -461,17 +461,18 @@
                             </label>
 
                             <div class="input-group">
-                                <input class="form-control" name="subject" id="subject" required="" placeholder="Mi Empresa" type="text">
+                                <input class="form-control" id="empresa" placeholder="Mi Empresa" type="text">
                             </div>
                         </div>
                     </div>
                     <!-- End Input -->
                 </div>
-            </form>
+            </div>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Enviar</button>
+          <button type="button" class="btn btn-primary" id="enviar" disabled>Enviar</button>
         </div>
       </div>
     </div>
@@ -573,6 +574,7 @@
 
     <script src="js/form/contact.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
 
   </body>
   </html>
