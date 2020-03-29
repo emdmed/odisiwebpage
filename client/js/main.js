@@ -23,20 +23,27 @@ function ValidateName(name)
     alert("Error, por favor verifica los datos ingresados")
 }
 
+//check which plan got clicked
+$("body").on("click", "#plan_remoto_btn", function(){
+    consulta.plan = "remoto";
+})
+$("body").on("click", "#plan_gold_btn", function(){
+    consulta.plan = "gold";
+})
+$("body").on("click", "#plan_premium_btn", function(){
+    consulta.plan = "premium";
+})
+
 
 $("body").on("keyup", function(){
-
-    console.log("keypress...");
 
     let nombre_value = $("#nombre").val();
     let email_value = $("#email").val();
     let empresa_value = $("#empresa").val();
 
     if(nombre_value.length > 0 && email_value.length >0 && empresa_value.length >0){
-        console.log("Activate button")
         $("#enviar").prop("disabled", false);
     } else {
-        console.log("Not")
         $("#enviar").prop("disabled", true);
     }
 
@@ -53,8 +60,10 @@ $("body").on("click", "#enviar", function(){
     let val_empresa = ValidateName(empresa_value);
 
     if(val_email === true && val_nombre === true && val_empresa === true){
-        console.log("send form");
-        
+        consulta.nombre = nombre_value;
+        consulta.empresa = empresa_value;
+        consulta.email = email_value;
+        console.log("send form ",consulta)
     }
 
 })
