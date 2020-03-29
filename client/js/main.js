@@ -33,6 +33,10 @@ $("body").on("click", "#plan_gold_btn", function(){
 $("body").on("click", "#plan_premium_btn", function(){
     consulta.plan = "premium";
 })
+$("body").on("click", "#plan_personalizado_btn", function(){
+    consulta.plan = "personalizado";
+})
+
 
 
 $("body").on("keyup", function(){
