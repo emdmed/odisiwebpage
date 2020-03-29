@@ -358,7 +358,7 @@
                             <li>Videollamada</li>
                         </ul>
 
-                        <a href="#" class="btn btn-outline-dark btn-circled">Consultar</a>
+                        <a href="#" class="btn btn-outline-dark btn-circled" data-toggle="modal" data-target="#exampleModalCenter">Consultar</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 col-md-6">
@@ -376,7 +376,7 @@
      
                         </ul>
 
-                        <a href="#" class="btn btn-primary btn-circled">Consultar</a>
+                        <a href="#" class="btn btn-primary btn-circled" data-toggle="modal" data-target="#exampleModalCenter">Consultar</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-8 col-md-6">
@@ -393,7 +393,7 @@
                             <li>IA + Data analysis</li>
                         </ul>
 
-                        <a href="#" class="btn btn-outline-dark btn-circled">Consultar</a>
+                        <a href="#" class="btn btn-outline-dark btn-circled" data-toggle="modal" data-target="#exampleModalCenter">Consultar</a>
                     </div>
                 </div>
             </div>
@@ -402,10 +402,82 @@
         <br>
         <br>
         <div class="container text-center">
-            <a href="#" class="btn btn-primary btn-block btn-circled">Plan personalizado</a>
+            <a href="#" class="btn btn-primary btn-block btn-circled" data-toggle="modal" data-target="#exampleModalCenter">Plan personalizado</a>
         </div>
        
     </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Consultar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form class="contact_form" action="mail.php">
+                <div class="row">
+                    <!-- Input -->
+                    <div class="col-sm-6 mb-6">
+                        <div class="form-group">
+                            <label class="h6 small d-block text-uppercase">
+                                Nombre y Apellido
+                                <span class="text-danger">*</span>
+                            </label>
+
+                            <div class="input-group">
+                                <input class="form-control" name="name" id="name" required="" placeholder="Nombre y Apellido" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="col-sm-6 mb-6">
+                        <div class="form-group">
+                            <label class="h6 small d-block text-uppercase">
+                                Email
+                                <span class="text-danger">*</span>
+                            </label>
+
+                            <div class="input-group ">
+                                <input class="form-control" name="email" id="email" required="" placeholder="email@email.com" type="email">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <div class="w-100"></div>
+
+                    <!-- Input -->
+                    <div class="col-sm-6 mb-6">
+                        <div class="form-group">
+                            <label class="h6 small d-block text-uppercase">
+                                Empresa
+                                <span class="text-danger">*</span>
+                            </label>
+
+                            <div class="input-group">
+                                <input class="form-control" name="subject" id="subject" required="" placeholder="Mi Empresa" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Input -->
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 <section class="section" id="projects-wrap">
         <div class="overlay"></div>
         <div class="container">
@@ -443,23 +515,13 @@
                         <!-- Links -->
                         <ul class="footer-links ">
                             <li>
-                                <a href="#">
+                                <a href="tyc.html">
                                     Terminos y condiciones
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="privacy.html">
                                     Privacidad
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Servicios
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Preguntas frecuentes
                                 </a>
                             </li>
                         </ul>
