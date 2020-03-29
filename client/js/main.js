@@ -68,6 +68,17 @@ $("body").on("click", "#enviar", function(){
         consulta.empresa = empresa_value;
         consulta.email = email_value;
         console.log("send form ",consulta)
+
+        $.ajax({
+            url: "/contact",
+            method: "POST",
+            data: consulta,
+            success: function(res){
+                console.log("cool");
+                alert("Nos contactaremos con usted a la brevedad.")
+                $("#exampleModalCenter").modal("hide");
+            }
+        })
     }
 
 })
