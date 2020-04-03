@@ -869,22 +869,6 @@ h5.subtitle {
   margin-top: 15px;
 }
 
-.web-service-block:hover {
-  background: #fff;
-  border-color: transparent;
-}
-
-.web-service-block:hover i {
-  color: #21c87a;
-}
-
-.web-service-block:hover h3 {
-  color: #111;
-}
-
-.web-service-block:hover p {
-  color: #111;
-}
 
 .service-img {
   margin-bottom: -200px;
