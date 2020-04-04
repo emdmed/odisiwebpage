@@ -63,6 +63,8 @@ $("body").on("click", "#enviar", function(){
     let val_nombre = ValidateName(nombre_value);
     let val_empresa = ValidateName(empresa_value);
 
+    $(this).prop("disabled", true);
+
     if(val_email === true && val_nombre === true && val_empresa === true){
         consulta.nombre = nombre_value;
         consulta.empresa = empresa_value;
@@ -75,6 +77,7 @@ $("body").on("click", "#enviar", function(){
             data: consulta,
             success: function(res){
                 console.log("cool");
+                $(this).prop("disabled", false);
                 alert("Nos contactaremos con usted a la brevedad.")
                 $("#exampleModalCenter").modal("hide");
             }
