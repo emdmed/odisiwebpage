@@ -9,8 +9,6 @@ const db_handler = {
     }
 }
 
-
-
 module.exports = db_handler;
         
 
