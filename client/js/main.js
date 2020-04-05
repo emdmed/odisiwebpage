@@ -36,10 +36,6 @@ $("body").on("click", "#plan_premium_btn", function(){
 $("body").on("click", "#plan_personalizado_btn", function(){
     consulta.plan = "personalizado";
 })
-$("body").on("click", "#solicitar_demo", function(){
-    consulta.plan = "demo";
-})
-
 
 
 $("body").on("keyup", function(){
@@ -90,12 +86,33 @@ $("body").on("click", "#enviar", function(){
 })
 
 $("body").on("click", "#request_demo", function(){
-    console.log("click")
-    $("#exampleModalCenter").append(`
- 
+    consulta.plan = "demo";
+    $(".demo_container").append(`
+        <div class="card bg-primary text-white">
+            <div class="card-header">
+                <h4 class="text-center text-white text-bold">La Demo incluye</h4>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>App Android</li>
+                    <li>Chat paciente/médico</li>
+                    <li>Geolocalización de consultas</li>
+                    <li>Validación de direcciones</li>
+                    <li>Panel de control para carga de profesionales</li>
+                    <li>Trazabilidad de consultas atendidas</li>
+                </ul>
+                <p>Duración: 15 días</p>
+            </div>   
+        </div>
+        <hr>
     `)
 
 })
+
+//hide demo card when modal closes
+$('#exampleModalCenter').on('hidden.bs.modal', function () {
+    $(".demo_container").empty();
+});
 
 
 //LAXXX
