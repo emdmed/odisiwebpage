@@ -6,6 +6,12 @@ const db_handler = {
         let write = await Consulta.create(contact, callback)
         await write;
         return true;
+    },
+    demo: async function(contact, callback){
+        contact.date = new Date();
+        let write = await consulta.create(contact, callback)
+        await write;
+        return true;
     }
 }
 

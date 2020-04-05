@@ -36,6 +36,9 @@ $("body").on("click", "#plan_premium_btn", function(){
 $("body").on("click", "#plan_personalizado_btn", function(){
     consulta.plan = "personalizado";
 })
+$("body").on("click", "#solicitar_demo", function(){
+    consulta.plan = "demo";
+})
 
 
 
@@ -49,8 +52,8 @@ $("body").on("keyup", function(){
         $("#enviar").prop("disabled", false);
     } else {
         $("#enviar").prop("disabled", true);
+      
     }
-
 })
 
 $("body").on("click", "#enviar", function(){
@@ -83,6 +86,14 @@ $("body").on("click", "#enviar", function(){
             }
         })
     }
+
+})
+
+$("body").on("click", "#request_demo", function(){
+    console.log("click")
+    $("#exampleModalCenter").append(`
+ 
+    `)
 
 })
 

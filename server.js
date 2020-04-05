@@ -34,3 +34,11 @@ app.post("/contact", async function(req, res){
     console.log(success, " Complete..");
     res.status(200).end();
 })
+
+app.post("/demo", async function(req, res){
+    console.log("demo request...")
+    let data = req.body;
+    let success = await db_handler.demo(data);
+    console.log(success, " Complete..");
+    res.status(200).end();
+})
