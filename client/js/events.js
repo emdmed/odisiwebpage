@@ -7,3 +7,12 @@ $("body").on("click", "#see_plans", function(){
     
 
 })
+
+$("body").on("click", "#scroll_todemo", function(){
+
+  $('html,body').animate({
+    scrollTop: $("." + "demo_div").offset().top
+    }, 'slow');
+
+
+})
