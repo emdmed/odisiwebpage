@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162160086-1"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -10,13 +10,13 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'UA-162160086-1');
-</script>
-<!-- Google Tag Manager -->
+</script> -->
+<!-- Google Tag Manager 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5TFSX27');</script>
+    })(window,document,'script','dataLayer','GTM-5TFSX27');</script>-->
 <!-- End Google Tag Manager -->
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -496,6 +496,102 @@ gtag('config', 'UA-162160086-1');
       </div>
     </div>
   </div>
+
+  
+<!--Demo Modal-->
+<div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="demoModalTitle">Solicitar Demo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+            <div class="contact_form" action="mail.php">
+                    <div class="card bg-primary text-white">
+                        <div class="card-header">
+                            <h4 class="text-center text-white text-bold">La Demo incluye</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>App Android</li>
+                                <li>Chat paciente/médico</li>
+                                <li>Geolocalización de consultas</li>
+                                <li>Validación de direcciones</li>
+                                <li>Panel de control para carga de profesionales</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                   
+              <br>
+
+
+        
+                <div class="row">
+                    <!-- Input -->
+                    <div class="col-sm-6 mb-6">
+                        <div class="form-group">
+                            <label class="h6 small d-block text-uppercase">
+                                Nombre y Apellido
+                                <span class="text-danger">*</span>
+                            </label>
+
+                            <div class="input-group">
+                                <input class="form-control" id="nombre" placeholder="Nombre y Apellido" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="col-sm-6 mb-6">
+                        <div class="form-group">
+                            <label class="h6 small d-block text-uppercase">
+                                Email
+                                <span class="text-danger">*</span>
+                            </label>
+
+                            <div class="input-group ">
+                                <input class="form-control"id="email"placeholder="email@email.com" type="email">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <div class="w-100"></div>
+
+                    <!-- Input -->
+                    <div class="col-sm-6 mb-6">
+                        <div class="form-group">
+                            <label class="h6 small d-block text-uppercase">
+                                Empresa
+                                <span class="text-danger">*</span>
+                            </label>
+
+                            <div class="input-group">
+                                <input class="form-control" id="empresa" placeholder="Mi Empresa" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Input -->
+                </div>
+            </div>
+
+            <h5 class="text-center">Nos contactaremos con usted a la brevedad.</h5>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" id="solicitar_demo" disabled>Solicitar DEMO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--End Demo modal-->
 
 
 <section class="section" id="projects-wrap">
