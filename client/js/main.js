@@ -56,18 +56,21 @@ $("body").on("click", "#enviar", function(){
     let nombre_value = $("#nombre").val();
     let email_value = $("#email").val();
     let empresa_value = $("#empresa").val();
+    let mensaje_value = $("#mensaje").val();
     
     //regex validate
     let val_email = ValidateEmail(email_value);
     let val_nombre = ValidateName(nombre_value);
     let val_empresa = ValidateName(empresa_value);
+    let val_mensaje = ValidateName(mensaje_value);
 
     $(this).prop("disabled", true);
 
-    if(val_email === true && val_nombre === true && val_empresa === true){
+    if(val_email === true && val_nombre === true && val_empresa === true && val_mensaje === true){
         consulta.nombre = nombre_value;
         consulta.empresa = empresa_value;
         consulta.email = email_value;
+        consulta.mensaje = mensaje_value;
         console.log("send form ",consulta)
 
         $.ajax({
