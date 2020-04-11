@@ -104,7 +104,6 @@ $("body").on("click", "#request_demo", function(){
                     <li>Panel de control para carga de profesionales</li>
                     <li>Trazabilidad de consultas atendidas</li>
                 </ul>
-                <p>Duración: 15 días</p>
             </div>   
         </div>
         <hr>
@@ -129,3 +128,32 @@ window.onload = function() {
 
 	window.requestAnimationFrame(updateLax)
 }
+
+//Animation
+$(document).ready(function(){
+    animateDiv('.a');
+    animateDiv('.b');
+    animateDiv('.c');
+    animateDiv('.d');
+});
+
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    //var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+    
+    var nh = Math.floor(Math.random() * 250);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];    
+    
+}
+
+function animateDiv(myclass){
+    var newq = makeNewPosition();
+    $(myclass).animate({ top: newq[0], left: newq[1] }, 9000,   function(){
+      animateDiv(myclass);        
+    });
+    
+};
