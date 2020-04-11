@@ -1941,3 +1941,9 @@ CONTACT PAGE
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+
+.modern_input{
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
