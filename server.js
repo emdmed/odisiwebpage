@@ -26,6 +26,9 @@ app.get("/", function(req, res){
     res.sendFile(__dirname + "./index.html");
 })
 
+app.get("/remote", function(req, res){
+    res.sendFile(__dirname + "/client/remote.html");
+})
 
 app.post("/contact", async function(req, res){
     console.log("request...")
