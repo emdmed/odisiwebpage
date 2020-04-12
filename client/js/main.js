@@ -80,7 +80,6 @@ $("body").on("click", "#enviar", function(){
             success: function(res){
                 console.log("cool");
                 $(this).prop("disabled", false);
-                alert("Nos contactaremos con usted a la brevedad.")
                 $("#exampleModalCenter").modal("hide");
             }
         })
