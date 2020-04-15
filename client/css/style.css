@@ -1988,3 +1988,11 @@ div.d {
   filter: blur(.8px);
   -webkit-filter: blur(.8px);
 }
+
+
+#video{
+  height: 520px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
