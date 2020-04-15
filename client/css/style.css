@@ -1995,4 +1995,5 @@ div.d {
   border-style: solid;
   border-width: 3px;
   border-color: black;
+  z-index: 1;
 }
