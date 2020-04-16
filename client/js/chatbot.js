@@ -29,6 +29,16 @@ function ValidateEmail_noalert(mail)
     return (false)
 }
 
+function ValidateName_noalert(name)
+{
+    if (/^[a-zA-Z ]+$/.test(name)){
+        return(true)
+    } else {
+        return (false)
+    }
+
+}
+
 
 //user sends chat
 $("body").on("click", ".send_chat", async function(){
@@ -61,49 +71,56 @@ $("body").on("click", ".send_chat", async function(){
 
 
 function search_email_in_string(string){
-    let string_array = string.split(" ");
-    let email_found = false;
-    for(let i = 0; i < string_array.length; i++){
-        let is_email = ValidateEmail_noalert(string_array[i]);
-        if(is_email === true){
-            email_found = true
-            data.email = string_array[i]
-        } else {}
+    //validate string
+    let validate = ValidateName_noalert(string);
+    if(validate === true){
+        let string_array = string.split(" ");
+        let email_found = false;
+        for(let i = 0; i < string_array.length; i++){
+            let is_email = ValidateEmail_noalert(string_array[i]);
+            if(is_email === true){
+                email_found = true
+                data.email = string_array[i]
+            } else {}
+        }
+    
+        if(email_found === false){
+            data.messages.push(string);
+            console.log(data)
+    
+            setTimeout(() => {
+    
+                $("#chat-here").append(`
+                
+                    <div class="chat-bubble-bot">
+                    <p>Muy bien, por favor dime tu email para contactarte</p>
+                    </div>
+                
+                `);
+        
+                $("#chat-here").animate({ scrollTop: $(document).height()-$(window).height() });
+                $(".send_chat").attr("disabled", false);
+                console.log($(".send_chat"))
+            }, 3000);
+        } else if (email_found === true){
+            setTimeout(() => {
+    
+                $("#chat-here").append(`
+                
+                    <div class="chat-bubble-bot">
+                    <p>Gracias por tu email, te contactaremos enseguida!</p>
+                    </div>
+                
+                `);
+        
+                $("#chat-here").animate({ scrollTop: $(document).height()-$(window).height() });
+        
+            }, 3000);
+        }
+    } else {
+        console.log("error");
     }
-
-    if(email_found === false){
-        data.messages.push(string);
-        console.log(data)
-
-        setTimeout(() => {
-
-            $("#chat-here").append(`
-            
-                <div class="chat-bubble-bot">
-                <p>Muy bien, por favor dime tu email para contactarte</p>
-                </div>
-            
-            `);
-    
-            $("#chat-here").animate({ scrollTop: $(document).height()-$(window).height() });
-            $(".send_chat").attr("disabled", false);
-            console.log($(".send_chat"))
-        }, 3000);
-    } else if (email_found === true){
-        setTimeout(() => {
-
-            $("#chat-here").append(`
-            
-                <div class="chat-bubble-bot">
-                <p>Gracias por tu email, te contactaremos enseguida!</p>
-                </div>
-            
-            `);
-    
-            $("#chat-here").animate({ scrollTop: $(document).height()-$(window).height() });
-    
-        }, 3000);
-    }
+  
 }
 
 function check_if_data_is_complete(data){
