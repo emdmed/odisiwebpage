@@ -30,6 +30,10 @@ app.get("/remote", function(req, res){
     res.sendFile(__dirname + "/client/remote.html");
 })
 
+app.get("/test", function(req, res){
+    res.sendFile(__dirname + "/client/test.html");
+})
+
 app.post("/contact", async function(req, res){
     console.log("request...")
     let data = req.body;

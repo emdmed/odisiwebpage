@@ -1997,3 +1997,170 @@ div.d {
   border-color: black;
   z-index: 1;
 }
+
+
+@media (max-width: 600px) {
+
+  .chatbot-div{
+    position: fixed;
+    width: 90%;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    max-height: 40%;
+  
+  }
+  
+  #chatbot-textarea{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+  
+  }
+  
+  .close-chatbot{
+    position: relative;
+    background-color: white;
+    border: none;
+    left: 95%;
+    top: 0px;
+    margin-left: 0px;
+    color: #a9a9a9;
+  }
+  
+  .chat-bubble-bot{
+    position: relative;
+    background-color: #49DE8F;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  .chat-bubble-user{
+    position: relative;
+    background-color: white;
+    border-color: #21c87a;
+    border-style: solid;
+    border-width: 1px;
+    color: #21c87a;
+    width: 100%;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  #chatbot-textarea{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  
+  #chat-here{
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .send_chat{
+    position: relative;
+    right: 5px;
+    border: none;
+    padding: 8px;
+  }
+
+
+}
+
+@media (min-width: 600px){
+  
+  .chatbot-div{
+    position: fixed;
+    width: 20%;
+    bottom: 10px;
+    right: 0px;
+
+
+    max-height: 40%;
+  
+  }
+  
+  #chatbot-textarea{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+  
+  }
+  
+  .close-chatbot{
+    position: relative;
+    background-color: white;
+    border: none;
+    left: 95%;
+    top: 0px;
+    margin-left: 0px;
+    color: #a9a9a9;
+  }
+  
+  .chat-bubble-bot{
+    position: relative;
+    background-color: #49DE8F;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  .chat-bubble-user{
+    position: relative;
+    background-color: white;
+    border-color: #21c87a;
+    border-style: solid;
+    border-width: 1px;
+    color: #21c87a;
+    width: 100%;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  #chatbot-textarea{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  
+  #chat-here{
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .send_chat{
+    position: relative;
+    right: 5px;
+    border: none;
+    padding: 8px;
+  }
+
+}
+
+
