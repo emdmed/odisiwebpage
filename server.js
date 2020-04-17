@@ -17,7 +17,7 @@ app.use(express.static(__dirname + "/client"));
 server.listen(process.env.PORT || 3000);
 console.log("Server running...")
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 //ROUTES
@@ -39,6 +39,13 @@ app.post("/contact", async function(req, res){
     let data = req.body;
     let success = await db_handler.register(data);
     console.log(success, " Complete..");
+    res.status(200).end();
+})
+
+app.post("/chat", async function(req, res){
+    let data = req.body;
+    console.log(data);
+    let success = await db_handler.store_chat(data);
     res.status(200).end();
 })
 

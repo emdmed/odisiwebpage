@@ -123,6 +123,17 @@ function check_if_data_is_complete(data){
         } else {
             if(data.email.length > 0 && data.messages.length > 0){
                 console.log("Send ajax post request");
+                console.log(data)
+                //AJAX POST
+                $.ajax({
+                    url: "/chat",
+                    method: "POST",
+                    data: data,
+                    success: function(res){
+                        console.log(res);
+                    }
+                })
+
                 clearInterval(interval);
             }
         }
