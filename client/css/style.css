@@ -2036,8 +2036,9 @@ div.d {
     position: relative;
     background-color: #49DE8F;
     color: white;
-    width: 100%;
-    padding: 10px;
+    width: 90%;
+    padding: 5px;
+    margin:5px;
     border-top-left-radius: 0px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -2051,8 +2052,9 @@ div.d {
     border-style: solid;
     border-width: 1px;
     color: #21c87a;
-    width: 100%;
-    padding: 10px;
+    width: 90%;
+    padding: 5px;
+    margin:5px;
     border-top-left-radius: 15px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 15px;
@@ -2082,6 +2084,7 @@ div.d {
 
 }
 
+/*DESKTOP*/
 @media (min-width: 600px){
   
   .chatbot-div{
