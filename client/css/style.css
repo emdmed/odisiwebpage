@@ -2087,12 +2087,9 @@ div.d {
   .chatbot-div{
     position: fixed;
     width: 20%;
-    bottom: 10px;
-    right: 0px;
-
-
+    bottom: 50px;
+    right: 50px;
     max-height: 40%;
-  
   }
   
   #chatbot-textarea{
