@@ -50,7 +50,7 @@ $("body").on("click", ".send_chat", async function(){
     //check if email
     await search_email_in_string(user_text);
 
-    console.log(data);
+    //console.log(data);
 
     $("#chat-here").append(`
     
@@ -82,7 +82,7 @@ function search_email_in_string(string){
 
     if(email_found === false){
         data.messages.push(string);
-        console.log(data)
+        //console.log(data)
 
         setTimeout(() => {
 
@@ -96,7 +96,7 @@ function search_email_in_string(string){
     
             $("#chat-here").animate({ scrollTop: $(document).height()-$(window).height() });
             $(".send_chat").attr("disabled", false);
-            console.log($(".send_chat"))
+            //console.log($(".send_chat"))
         }, 3000);
     } else if (email_found === true){
         setTimeout(() => {
@@ -122,15 +122,15 @@ function check_if_data_is_complete(data){
 
         } else {
             if(data.email.length > 0 && data.messages.length > 0){
-                console.log("Send ajax post request");
-                console.log(data)
+                //console.log("Send ajax post request");
+                //console.log(data)
                 //AJAX POST
                 $.ajax({
                     url: "/chat",
                     method: "POST",
                     data: data,
                     success: function(res){
-                        console.log(res);
+                        //console.log(res);
                     }
                 })
 
