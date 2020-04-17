@@ -60,6 +60,8 @@ $("body").on("click", ".send_chat", async function(){
 
     `)
 
+    $("#chat-here").animate({ scrollTop: $(document).height()-$(window).height() });
+
     $("#chatbot-textarea").val("");
 
 })
