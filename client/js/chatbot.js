@@ -1,4 +1,4 @@
-var init_time = 9000
+var init_time = 17000
 
 let data = {
     email: "",
